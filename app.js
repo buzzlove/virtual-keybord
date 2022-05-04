@@ -51,11 +51,11 @@ function keybord(source){
        appendelement(source, level);
        KEYS[keys].forEach(item => appendelement(level, createElement("button", "keybord__key", item, item)));
     }
-    document.querySelector(`[data-name="backslash"]`).textContent = "\\";
-    document.querySelector(`[data-name="arrowup"]`).textContent = "↑";
-    document.querySelector(`[data-name="arrowleft"]`).textContent = "←";
-    document.querySelector(`[data-name="arrowright"]`).textContent = "→";
-    document.querySelector(`[data-name="arrowdown"]`).textContent = "↓";
+    document.querySelector("[data-name=backslash]").textContent = "\\";
+    document.querySelector("[data-name=arrowup]").textContent = "↑";
+    document.querySelector("[data-name=arrowleft]").textContent = "←";
+    document.querySelector("[data-name=arrowright]").textContent = "→";
+    document.querySelector("[data-name=arrowdown]").textContent = "↓";
     addListenerKey();
 }
 function addListenerKey(){
@@ -114,18 +114,18 @@ initialisation();
 function realKeyboardPressed(event){
     let key = event.key.toLowerCase();
     let code = event.code.toLowerCase();
-    code === "backslash" ? key = "backslash" : ''; 
-    key === 'control' ? key = 'ctrl' : key === "meta" ? key = "win" : '';
-    const getVirtualKeys = document.querySelectorAll(`[data-name='${key}']`);
+    code === "backslash" ? key = "backslash" : ""; 
+    key === "control" ? key = "ctrl" : key === "meta" ? key = "win" : "";
+    const getVirtualKeys = document.querySelectorAll(`[data-name="${key}"]`);
     getVirtualKeys.forEach(item => item.classList.add("pressed"));
 }
 function realKeyboardReleased(event){
     const TEXTAREA = document.querySelector(".inputText__textArea");
     let key = event.key.toLowerCase();
     let code = event.code.toLowerCase();
-    code === "backslash" ? key = "backslash" : ''; 
-    key === 'control' ? key = 'ctrl' : key === "meta" ? key = "win" : '';
-    const getVirtualKeys = document.querySelectorAll(`[data-name='${key}']`);
+    code === "backslash" ? key = "backslash" : ""; 
+    key === "control" ? key = "ctrl" : key === "meta" ? key = "win" : "";
+    const getVirtualKeys = document.querySelectorAll(`[data-name="${key}"]`);
     getVirtualKeys.forEach(item => item.classList.remove("pressed"));
     TEXTAREA.focus();
 }
