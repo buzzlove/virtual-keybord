@@ -9,7 +9,7 @@ let capslock = false;
 let ctrl = false;
 let shift = false;
 let alt = false;
-
+let language = 'en';
 function initialisation(){
     const MAIN = createElement("div", "main");
     let UPPER = createElement("div", "inputText");
@@ -89,7 +89,7 @@ function keybordClick(event){
             shift = !shift;
             shift ? currentTarget.classList.add("pressed") : currentTarget.classList.remove("pressed");
             break;   
-        case "ALT":
+        case "alt":
             alt = !alt;
             alt ? currentTarget.classList.add("pressed") : currentTarget.classList.remove("pressed");
             break ;   
@@ -98,18 +98,17 @@ function keybordClick(event){
             break ;  
         case "enter":
             alt = !alt;
-            break;                                                                
+            break;                                                                            
         default: 
         TEXTAREA.value += (capslock || shift) ? TEXT.toUpperCase() : TEXT;
     }
-    if(TEXT !== "capslock" && TEXT !=="shift" && TEXT !=="ctrl" && TEXT !=="ALT"){
+    if(TEXT !== "capslock" && TEXT !=="shift" && TEXT !=="ctrl" && TEXT !=="alt"){
         currentTarget.classList.add("pressed");
         setTimeout(()=>  currentTarget.classList.remove("pressed"), 100);
     } 
 
     TEXTAREA.focus();
 }
-initialisation();
 
 function realKeyboardPressed(event){
     let key = event.key.toLowerCase();
@@ -129,3 +128,5 @@ function realKeyboardReleased(event){
     getVirtualKeys.forEach(item => item.classList.remove("pressed"));
     TEXTAREA.focus();
 }
+
+initialisation();
