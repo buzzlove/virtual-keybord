@@ -1,3 +1,25 @@
+.inputText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputText__textArea {
+  resize: none;
+  width: 100%;
+  margin: 0px 0px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.804);
+  border-radius: 5px;
+}
+
+.inputText__textArea:focus {
+  border: 1px solid rgba(0, 0, 0, 0.804);
+  outline: none;
+}
+
 .keybord {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,22 +39,55 @@
           justify-content: space-between;
 }
 .keybord__key {
-  min-width: 40px;
-  height: 40px;
+  border: 0 none;
+  cursor: pointer;
+  outline: none;
+  min-width: 45px;
+  height: 45px;
   background-color: rgba(0, 0, 0, 0.804);
-  color: rgba(8, 255, 8, 0.655);
+  color: rgba(8, 255, 8, 0.488);
   -webkit-box-shadow: 1px 1px solid black;
           box-shadow: 1px 1px solid black;
   border-radius: 5px;
 }
-.keybord__key[data-name=space] {
-  -webkit-box-flex: 0.9;
-      -ms-flex: 0.9 0 0px;
-          flex: 0.9 0 0;
+.keybord__key[data-name=" "] {
+  -webkit-box-flex: 0.85;
+      -ms-flex: 0.85 0 0px;
+          flex: 0.85 0 0;
+}
+.keybord__key[data-name=shift]:first-child {
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5 0 0px;
+          flex: 0.5 0 0;
+}
+.keybord__key:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.pressed {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+body {
+  background-color: aliceblue;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 700px;
-  margin: 200px auto;
-  background-color: aliceblue;
+  margin: 0px auto;
 }
