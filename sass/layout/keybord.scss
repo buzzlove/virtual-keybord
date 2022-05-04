@@ -1,0 +1,20 @@
+.keybord {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    &__level {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__key {
+        min-width: 40px;
+        height: 40px;
+        background-color:rgba(0, 0, 0, 0.804) ;
+        color: rgba(8, 255, 8, 0.655);
+        box-shadow: 1px 1px solid black;
+        border-radius: 5px;
+        &[data-name='space'] {
+            flex: 0.9 0 0;
+        }
+    }
+}

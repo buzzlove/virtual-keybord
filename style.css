@@ -1,0 +1,38 @@
+.keybord {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+.keybord__level {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.keybord__key {
+  min-width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.804);
+  color: rgba(8, 255, 8, 0.655);
+  -webkit-box-shadow: 1px 1px solid black;
+          box-shadow: 1px 1px solid black;
+  border-radius: 5px;
+}
+.keybord__key[data-name=space] {
+  -webkit-box-flex: 0.9;
+      -ms-flex: 0.9 0 0px;
+          flex: 0.9 0 0;
+}
+
+.main {
+  max-width: 700px;
+  margin: 200px auto;
+  background-color: aliceblue;
+}
