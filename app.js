@@ -10,7 +10,7 @@ let ctrl = false;
 let shift = false;
 let alt = false;
 let language = false;
-let Center = '';
+let Center = "";
 const KEYS_EN = {
     1: ["`", "1", "2", "3", "4", "5", "6", "7", "8", "9","0", "-", "=", "backspace"],
     2: ["tab", "q", "w", "e", "r", "t", "y", "u", "i", "o","p", "[", "]", "delete" ],
@@ -106,7 +106,7 @@ function keybordClick(event){
             alt = !alt;
             alt ? currentTarget.classList.add("pressed") : currentTarget.classList.remove("pressed");
             break ;   
-        case "WIN":
+        case "win":
             alt = !alt;
             break ;  
         case "enter":
@@ -119,7 +119,6 @@ function keybordClick(event){
         case "←":
         case "→":
         case "↓":            
-            cursorMove();
             break;                                                                                                 
         default: 
         TEXTAREA.value += (capslock || shift) ? TEXT.toUpperCase() : TEXT;
@@ -148,9 +147,6 @@ function realKeyboardReleased(event){
     getVirtualKeys.forEach(item => item.classList.remove("pressed"));
     TEXTAREA.focus();
 }
-function cursorMove(){
-
-};
 function additionalFunc(){
    const keyCollection = document.querySelectorAll(".keybord__key");
    if(shift){
