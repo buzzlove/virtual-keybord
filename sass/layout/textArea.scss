@@ -1,0 +1,16 @@
+.inputText{
+    display: flex;
+}
+.inputText__textArea {
+    resize: none;
+    width: 100%;
+    margin: 0px 0px 25px;
+    box-sizing: border-box;
+    outline:none;
+    border: 1px solid rgba(0, 0, 0, 0.804);
+    border-radius: 5px;
+}
+.inputText__textArea:focus {
+    border: 1px solid rgba(0, 0, 0, 0.804);
+    outline:none;
+}
